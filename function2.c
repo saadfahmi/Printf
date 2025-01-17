@@ -7,21 +7,20 @@
  * Return: The number of characters printed.
  */
 int print_hexa(unsigned int num, int uppercase)
-{   
-            int i;
-            i = 0;
-            char Upper[] = "0123456789ABCDEF";
-            char lower[] = "0123456789abcdef";
-            char *digits = uppercase ? Upper : lower;
-            unsigned int xf = 0xF;
+{
+        int i;
+        i = 0;
+        char Upper[] = "0123456789ABCDEF";
+        char lower[] = "0123456789abcdef";
+        char *digits = uppercase ? Upper : lower;
+        unsigned int xf = 0xF;
 
-            if(num >= 16)
-                    i+= print_hexa( num / 16, uppercase);
-            
-            putchar(digits[num & xf]);
-            i++;
-            return(i);
+        if (num >= 16)
+                i += print_hexa(num / 16, uppercase);
 
+        putchar(digits[num & xf]);
+        i++;
+        return (i);
 }
 /**
  * print_unsigned_int - Prints an unsigned integer.
@@ -34,27 +33,23 @@ int printf_unsigned_int(unsigned int num)
         int i;
         unsigned int j;
         i = 0;
-        j =1;
-        if(num == 0)
+        j = 1;
+        if (num == 0)
         {
                 putchar('0');
-                return(1);
+                return (1);
         }
 
-        while(num / j >= 10)
-                j*= 10;
-        while(j !='0')
+        while (num / j >= 10)
+                j *= 10;
+        while (j != '0')
         {
                 putchar(num / j + '0');
                 i++;
                 num %= j;
                 j /= 10;
-
-
         }
-        return(i);
-
-
+        return (i);
 }
 /**
  * print_octal - Prints an octal.
@@ -64,29 +59,25 @@ int printf_unsigned_int(unsigned int num)
  */
 int print_octal(unsigned int num)
 {
-                int i;
-                unsigned int j;
-                i = 0;
-                j = 1;
-                if(num == 0)
-                {
-                        putchar('0');
-                        return(1);
-
-                }
-                while(num >= 8)
+        int i;
+        unsigned int j;
+        i = 0;
+        j = 1;
+        if (num == 0)
+        {
+                putchar('0');
+                return (1);
+        }
+        while (num >= 8)
                 j *= 8;
-                while( j != 0)
-                {
-                        putchar(num / j + '0');
-                        i++;
-                        num %= j;
-                        j /= 8;
-
-
-                }
-                return(i);
-
+        while (j != 0)
+        {
+                putchar(num / j + '0');
+                i++;
+                num %= j;
+                j /= 8;
+        }
+        return (i);
 }
 /*
  * print_addr - Prints an address.
@@ -100,30 +91,25 @@ int print_addr(void *ptr)
         int i = 0;
         int j;
         char arr_hex[16];
-        if(ptr == NULL)
+        if (ptr == NULL)
         {
-                return(print_string("(NULL)"));
-
+                return (print_string("(NULL)"));
         }
         putchar('0');
         putchar('x');
-        if(adress == 0)
+        if (adress == 0)
         {
                 putchar('0');
-                return(3);
-
+                return (3);
         }
-        while(adress != 0)
+        while (adress != 0)
         {
                 int rem = adress % 16;
-                arr_hex[i++] =  (rem < 10) ? (rem + '0'):(rem - 10 + 'a');
-
+                arr_hex[i++] = (rem < 10) ? (rem + '0') : (rem - 10 + 'a');
         }
-        for(j = i - 1; j >= 0; j--)
+        for (j = i - 1; j >= 0; j--)
         {
                 putchar(arr_hex[j]);
         }
-        return(i + 2);
-        
-
+        return (i + 2);
 }
