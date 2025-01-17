@@ -18,7 +18,7 @@ int print_hexa(unsigned int num, int uppercase)
         if (num >= 16)
                 i += print_hexa(num / 16, uppercase);
 
-        putchar(digits[num & xf]);
+        _putchar(digits[num & xf]);
         i++;
         return (i);
 }
@@ -36,7 +36,7 @@ int printf_unsigned_int(unsigned int num)
         j = 1;
         if (num == 0)
         {
-                putchar('0');
+                _putchar('0');
                 return (1);
         }
 
@@ -44,7 +44,7 @@ int printf_unsigned_int(unsigned int num)
                 j *= 10;
         while (j != '0')
         {
-                putchar(num / j + '0');
+                _putchar(num / j + '0');
                 i++;
                 num %= j;
                 j /= 10;
@@ -65,14 +65,14 @@ int print_octal(unsigned int num)
         j = 1;
         if (num == 0)
         {
-                putchar('0');
+                _putchar('0');
                 return (1);
         }
         while (num >= 8)
                 j *= 8;
         while (j != 0)
         {
-                putchar(num / j + '0');
+                _putchar(num / j + '0');
                 i++;
                 num %= j;
                 j /= 8;
@@ -95,11 +95,11 @@ int print_addr(void *ptr)
         {
                 return (print_string("(NULL)"));
         }
-        putchar('0');
-        putchar('x');
+        _putchar('0');
+        _putchar('x');
         if (adress == 0)
         {
-                putchar('0');
+                _putchar('0');
                 return (3);
         }
         while (adress != 0)
@@ -109,7 +109,7 @@ int print_addr(void *ptr)
         }
         for (j = i - 1; j >= 0; j--)
         {
-                putchar(arr_hex[j]);
+                _putchar(arr_hex[j]);
         }
         return (i + 2);
 }
