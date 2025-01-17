@@ -26,7 +26,7 @@ int print_string(const char *str)
     {
         while (str[i] != '\0')
         {
-            putchar(str[i]);
+            _putchar(str[i]);
             i++;
         }
     }
@@ -48,7 +48,7 @@ int print_num(int num)
     j = 1;
     if (num == 0)
     {
-        putchar('0');
+        _putchar('0');
         return (1);
     }
     if (num == INT_MIN)
@@ -59,7 +59,7 @@ int print_num(int num)
     }
     else if (num < 0)
     {
-        putchar('-');
+        _putchar('-');
         abs_num = (unsigned int)(-num);
         i++;
     }
@@ -71,7 +71,7 @@ int print_num(int num)
         j *= 10;
     while (j > 0)
     {
-        putchar(abs_num / j + '0');
+        _putchar(abs_num / j + '0');
         i++;
         abs_num %= j;
         j /= 10;
