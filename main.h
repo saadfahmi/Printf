@@ -1,6 +1,16 @@
 #ifndef MAIN_H
 #define MAIN_H
-
+/**
+ * File: main.h
+ * Description: Header file containing all function prototypes and necessary
+ *              includes for custom implementation of formatted output functions.
+ *              These functions provide utilities for printing in various formats
+ *              including strings, integers, hexadecimal, octal, and more.
+ *
+ * Includes:
+ * - Standard libraries and macros for variadic arguments, I/O, memory management,
+ *   and limits.
+ */
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdio.h>
