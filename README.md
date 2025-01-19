@@ -4,27 +4,29 @@ This repository contains a custom C library designed for handling various string
 
 ## Functionality
 
-1. Custom printf Implementation
-  A lightweight custom version of the standard printf function.
-  Supports format specifiers like:
-  %c - Character
-  %s - String
-  %d - Signed decimal integer
-  %i - Integer
-  %u - Unsigned integer
-  %x / %X - Unsigned hexadecimal (lowercase/uppercase)
-  %o - Unsigned octal
-  %% - Percent symbol
-2. String Manipulation Functions
-  Functions to handle strings efficiently, including:
-  Concatenation
-  Copying
-  Length calculation
-  Custom parsing and tokenization
-3. Formatting and Utility Functions
-  Modular functions for handling:
-  Custom formatting for strings and numbers.
-  Handling various data types and edge cases.
+1. **Custom `printf` Implementation**
+   - A lightweight custom version of the standard `printf` function.
+   - Supports format specifiers like:
+     - `%c` - Character
+     - `%s` - String
+     - `%d` - Signed decimal integer
+     - `%i` - Integer
+     - `%u` - Unsigned integer
+     - `%x` / `%X` - Unsigned hexadecimal (lowercase/uppercase)
+     - `%o` - Unsigned octal
+     - `%%` - Percent symbol
+
+2. **String Manipulation Functions**
+   - Functions to handle strings efficiently, including:
+     - Concatenation
+     - Copying
+     - Length calculation
+     - Custom parsing and tokenization
+
+3. **Formatting and Utility Functions**
+   - Modular functions for handling:
+     - Custom formatting for strings and numbers.
+     - Handling various data types and edge cases.
 
 ## About the Project
 
@@ -44,6 +46,7 @@ function2.c        - Functions related to print formatting.
 handlers.c         - Handlers for various data types and formats.
 main.h             - Header file containing declarations for the library.
 main.c             - Example program to demonstrate the use of the custom library.
+
 ```
 ## ⚙️ How to Compile and Run
 1. Clone the repository:
