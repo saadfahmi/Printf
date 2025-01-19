@@ -2,14 +2,29 @@
 
 This repository contains a custom C library designed for handling various string manipulations and other utility functions. The project is organized into multiple files to promote modularity and maintainability.
 
-## Table of Contents
+## Functionality
 
-- [About the Project](#about-the-project)
-- [Files Description](#files-description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+1. Custom printf Implementation
+  A lightweight custom version of the standard printf function.
+  Supports format specifiers like:
+  %c - Character
+  %s - String
+  %d - Signed decimal integer
+  %i - Integer
+  %u - Unsigned integer
+  %x / %X - Unsigned hexadecimal (lowercase/uppercase)
+  %o - Unsigned octal
+  %% - Percent symbol
+2. String Manipulation Functions
+  Functions to handle strings efficiently, including:
+  Concatenation
+  Copying
+  Length calculation
+  Custom parsing and tokenization
+3. Formatting and Utility Functions
+  Modular functions for handling:
+  Custom formatting for strings and numbers.
+  Handling various data types and edge cases.
 
 ## About the Project
 
