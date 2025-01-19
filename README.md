@@ -28,3 +28,12 @@ function1.c        - Additional string manipulation functions.
 function2.c        - Functions related to print formatting.
 handlers.c         - Handlers for various data types and formats.
 main.h             - Header file containing declarations for the library.
+
+
+## ⚙️ How to Compile and Run
+. Clone the repository:
+  ```bash
+   git clone https://github.com/saadfahmi/Printf.git
+   cd Printf
+   gcc main.c
+   ./a.out
