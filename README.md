@@ -30,8 +30,9 @@ handlers.c         - Handlers for various data types and formats.
 main.h             - Header file containing declarations for the library.
 
 
+
 ## ⚙️ How to Compile and Run
-. Clone the repository:
+1. Clone the repository:
   ```bash
    git clone https://github.com/saadfahmi/Printf.git
    cd Printf
